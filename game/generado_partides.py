@@ -60,6 +60,9 @@ ratio = (guanyades/num_partides)*100
 print('\nJUGADORS TRIATS: '+players[myPlayer]+players[int(others[0])]+players[int(others[1])]+players[int(others[2])])
 print('\nRatio de partides guanyades = '+ str(ratio) +'% ('+str(guanyades)+'/'+str(num_partides)+')')
 repet = -2
+
+system("ps | grep python|grep python -n| grep 2: > trash.txt || python -m SimpleHTTPServer 9000 > trash.txt&")
+system("rm trash.txt")
 while(repet != -1):
 	if(repet != -2):
 		print('\n')
@@ -78,4 +81,5 @@ while(repet != -1):
 			var = system(game)
 			veure = raw_input('\x1b[1;34m' +'\nVols visualitzar-la? (y/n) '+ '\x1b[0m' )
 			if(veure == 'y'):
-				system("cd MadMax/Viewer/ && ./viewer.sh ../../default.res && cd ../../")
+				system("/opt/google/chrome/google-chrome  http://localhost:9000/MadMax/Viewer/viewer.html?game=/default.res\&start=yes && clear");
+				#HAUREU DE CANVIAR AQUESTA ULTIMA FILA SI NO TENIU GOOGLE-CHROME
