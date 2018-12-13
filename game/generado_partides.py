@@ -78,4 +78,4 @@ while(repet != -1):
 			var = system(game)
 			veure = raw_input('\x1b[1;34m' +'\nVols visualitzar-la? (y/n) '+ '\x1b[0m' )
 			if(veure == 'y'):
-				system("cd MadMax/Viewer/ && ./viewer.sh ../default.res && cd ../../")
+				system("cd MadMax/Viewer/ && ./viewer.sh ../../default.res && cd ../../")
